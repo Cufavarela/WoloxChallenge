@@ -1,0 +1,54 @@
+@import "../../Assets/Styles/abstracts/variables";
+
+.button {
+  border: 1px solid $primary;
+  border-radius: 2rem;
+  padding: 0.6rem 4.3rem;
+  font-size: 1rem;
+  text-decoration: none;
+  &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    color: $primary;
+    transition: ease-in-out 200ms;
+    &:hover {
+      color: white;
+      background-color: $primary;
+    }
+  }
+
+  &.white {
+    color: white;
+    transition: ease-in-out 200ms;
+    &:hover {
+      color: white;
+      background-color: $primary;
+    }
+  }
+
+  &.filled {
+    background-color: $primary;
+    color: white;
+    transition: ease-in-out 200ms;
+    &:hover {
+      color: $primary;
+      background-color: white;
+    }
+  }
+
+  &.big {
+    font-size: 1.6rem;
+    padding: 0.8rem 4.3rem;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+  .button {
+    &.big {
+      font-size: 1rem;
+    }
+  }
+}

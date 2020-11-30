@@ -1,0 +1,53 @@
+@import "../../Assets/Styles/abstracts/variables";
+
+.footer {
+  text-align: center;
+  background-image: url(../../Assets/Backgrounds/Bg_Footer@3x.png);
+  background-size: cover;
+
+  .footerText {
+    margin-bottom: 5rem;
+    h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      font-family: "Montserrat";
+
+      .blue {
+        color: $primary;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  .logoContainer {
+    margin: auto;
+    margin-top: 8rem;
+    padding-bottom: 3rem;
+    width: 7rem;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+  .footer {
+    .footerText {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

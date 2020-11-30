@@ -1,0 +1,228 @@
+@import "../../Assets/Styles/abstracts/variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(../../Assets/Backgrounds/Bg_Header.png);
+  max-width: 100vw;
+  overflow: hidden;
+  .container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 15px;
+    padding-left: 15px;
+    .title {
+      flex: 0 0 60%;
+      max-width: 60%;
+      font-size: 2rem;
+
+      h1 {
+        font-weight: 400;
+        margin: 0;
+        margin-top: 25vh;
+        .text-green {
+          display: block;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .illustration {
+      margin-right: calc(-50vw + 70%);
+      img {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        -ms-filter: "FlipH";
+        filter: FlipH;
+        // object-fit: cover;
+        // width: 100%;
+        // height: auto;
+        max-width: 100%;
+        min-width: 400px;
+        height: auto;
+      }
+    }
+  }
+}
+.woloxers-wrapper {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  grid-auto-rows: auto;
+  .woloxers {
+    background-image: url(../../Assets/img_woloxer.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    min-height: 60vh;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 3.5rem;
+    }
+    .twitter {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 40px;
+      }
+
+      p {
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+.work {
+  background-color: $gray;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.benefits {
+  text-align: center;
+  margin: 6rem 2rem;
+  padding-top: 2rem;
+
+  h2 {
+    font-size: 2.5rem;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  .benefitsGrid {
+    display: grid;
+    margin: 5rem 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    .gridItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h4 {
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 100vh;
+    height: auto;
+    .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      .title {
+        text-align: center;
+        flex: none;
+        max-width: 100%;
+        h1 {
+          margin-top: 5vh;
+        }
+      }
+      .illustration {
+        margin-right: 0;
+        max-width: 500px;
+        margin: 2rem auto;
+        img {
+          min-width: unset;
+        }
+      }
+    }
+  }
+  .woloxers-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .work {
+      padding: 5rem 2rem;
+      border-bottom: 1px rgba(0, 0, 0, 0.171) solid;
+    }
+  }
+  .benefits {
+    .benefitsGrid {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows: 1fr;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits {
+    .benefitsGrid {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 1fr;
+    }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+  .hero {
+    height: 100%;
+    .container {
+      justify-content: flex-start;
+      gap: 1rem;
+      flex: none;
+      .title {
+        h1 {
+          font-size: 2rem;
+          margin-top: 0;
+        }
+      }
+      .illustration {
+        max-width: 200px;
+      }
+    }
+  }
+  .woloxers-wrapper {
+    .woloxers {
+      min-height: 35vh;
+    }
+    .work {
+      padding: 1rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+  .benefits {
+    h2 {
+      font-size: 1.5rem;
+    }
+    .benefitsGrid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr;
+    }
+  }
+}
