@@ -1,0 +1,75 @@
+@import "../../Assets/Styles/abstracts/variables";
+
+header {
+  h1 {
+    margin-bottom: 1rem;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-weight: 400;
+      color: rgba($dark, 0.7);
+      margin-top: 0;
+      margin-bottom: 0;
+      strong {
+        color: rgba($dark, 1);
+        font-weight: 700;
+      }
+    }
+    .searchbar {
+      display: flex;
+
+      input {
+        border: none;
+        border-bottom: 2px solid $primary;
+        font-size: 1rem;
+        &:focus {
+          outline-offset: none;
+          outline: none;
+        }
+      }
+      button {
+        margin: 0 0.5rem;
+        border: 1px solid $primary;
+        border-radius: 1rem;
+        padding: 0.55rem;
+        color: $primary;
+        transition: ease-in-out 200ms;
+        &:hover {
+          color: white;
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.technologies-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem 0;
+  gap: 2rem;
+  background-image: url(../../Assets/Backgrounds/Bg_Header@2x.png);
+}
+
+@media (max-width: 700px) {
+  header {
+    nav {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    nav {
+      h2 {
+        display: none;
+      }
+    }
+  }
+}
