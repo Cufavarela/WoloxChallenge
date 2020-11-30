@@ -1,0 +1,14 @@
+.bg {
+  background-image: url(../../Assets/Backgrounds/Bg_Header.png);
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  .container {
+    text-align: center;
+    margin-top: 4rem;
+    h1 {
+      margin-bottom: 3rem;
+    }
+  }
+}
