@@ -36,7 +36,7 @@ function Landing() {
             <p>@Wolox</p>
           </div>
           <ExternalButton
-            text={"Siguenos"}
+            text={"Síguenos"}
             type={"white"}
             size={"big"}
             path={

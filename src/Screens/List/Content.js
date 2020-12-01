@@ -44,7 +44,7 @@ function Content() {
   return (
     <>
       <header className="container">
-        <h1>Tecnologias</h1>
+        <h1>Tecnologías</h1>
         <nav>
           <div className="searchbar">
             <input

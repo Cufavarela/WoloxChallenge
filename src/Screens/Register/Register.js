@@ -38,7 +38,7 @@ const Register = () => {
       email: Yup.string().email("Invalid email address").required("Required"),
       country: Yup.string("Required").required("Required"),
       region: Yup.string("Required").required("Required"),
-      phone: Yup.number("Required")
+      phone: Yup.number("Must be a number.")
         .required("Required")
         .max(9999999999, "Must be 10 characters or less"),
       pass1: Yup.string()
@@ -200,7 +200,10 @@ const Register = () => {
             <div className="errorMsg">{formik.errors.acceptTerms}</div>
           ) : null}
         </div>
-        <Submitbutton type="primary" text="Registrate" />
+        <Submitbutton type="primary" text="Register" />
+        <Link to="/" className="backButton">
+          Go back
+        </Link>
       </form>
     </div>
   );

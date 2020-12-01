@@ -27,7 +27,7 @@ const benefits = [
   {
     image: "/images/benefits/brain.svg",
     name: "brain",
-    title: "Trabajar en ultimas tecnologias",
+    title: "Trabajar en últimas tecnologias",
   },
 ];
 
