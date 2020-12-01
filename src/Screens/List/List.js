@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { Suspense } from "react";
 import Loader from "../../Components/Loader/Loader";
 

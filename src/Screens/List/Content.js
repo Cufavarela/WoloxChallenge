@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { getList } from "../../Functions/Functions";
 import Technology from "./Technology";
@@ -26,6 +24,7 @@ function Content() {
   useEffect(() => {
     getList().then((res) => setOriginalData(res.data.sort(sortTechnology)));
     getList().then((res) => console.log(res));
+    /* eslint-disable react-hooks/exhaustive-deps */
   }, []);
 
   useEffect(() => {
@@ -39,6 +38,7 @@ function Content() {
       )
       .sort(sortTechnology);
     setParsedData(dataFiltered);
+    /* eslint-disable react-hooks/exhaustive-deps */
   }, [searchTerm, sortAToZ, originalData]);
 
   return (
